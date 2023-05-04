@@ -13,7 +13,7 @@ import (
 	"github.com/dolthub/go-mysql-server/server"
 	"github.com/dolthub/go-mysql-server/sql"
 
-	"mysql-s/memory2"
+	"github.com/maomaoiii/mysql-s/memory2"
 )
 
 const (

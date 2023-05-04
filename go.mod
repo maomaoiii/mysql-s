@@ -1,4 +1,4 @@
-module mysql-s
+module github.com/maomaoiii/mysql-s
 
 go 1.16
 
