@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"math/rand"
 	"net"
+	"net/http"
+	_ "net/http/pprof"
 	"os"
 	"strconv"
 	"time"
@@ -22,6 +24,11 @@ const (
 )
 
 func main() {
+
+	go func() {
+		fmt.Println(http.ListenAndServe("localhost:6060", nil))
+	}()
+
 	driver := sqle.NewDefault()
 	driver.AddDatabase(createTestDatabase())
 
